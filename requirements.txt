@@ -1,0 +1,32 @@
+# Core LangChain
+langchain
+langchain-community
+langchain-core
+langchain-anthropic
+
+# Claude (Anthropic) SDK
+anthropic
+
+# Streamlit for UI
+streamlit
+
+# PDF/Text parsing
+unstructured
+pdfminer.six
+
+# Embeddings & Vector DB
+sentence-transformers
+faiss-cpu   # For local vector search (use faiss-gpu if you have GPU)
+
+# Date Parsing
+dateparser
+
+# Environment Variables
+python-dotenv
+
+# Optional (but useful)
+tqdm            # Progress bars
+pydantic        # For data validationv
+regex           # Improved regex support
+
+"unstructured[local-inference]"
