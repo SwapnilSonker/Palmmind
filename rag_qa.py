@@ -30,21 +30,25 @@ class CallbackRequest(BaseModel):
     name: str
     phone: str
     time: str
+    email: str
 
     @validator('phone')
     def validate_phone(cls, v):
+        v = v.strip()
         if not re.fullmatch(r"\d{10,15}", v):
             raise ValueError("Invalid phone number format")
         return v
     
     @validator('email')
     def validate_email(cls, v):
+        v = v.strip()
         if not re.fullmatch(r"[^@]+@[^@]+\.[^@]+", v):
             raise ValueError("Invalid email format")
         return v
 
     @validator('time')
     def validate_time(cls, v):
+        v = v.strip()
         if not re.fullmatch(r"\d{2}:\d{2}", v):
             raise ValueError("Invalid time format, expected HH:MM")
         return v
